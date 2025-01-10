@@ -1,7 +1,8 @@
+import 'package:admapu/config/constants/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:admapu/features/login/login.dart';
 import 'package:formz/formz.dart';
+import 'package:admapu/features/login/login.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -23,6 +24,8 @@ class LoginForm extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            Text(Environment.apiUrl),
+            const Padding(padding: EdgeInsets.all(12)),
             _UsernameInput(),
             const Padding(padding: EdgeInsets.all(12)),
             _PasswordInput(),
